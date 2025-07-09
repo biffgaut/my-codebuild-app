@@ -6,6 +6,6 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: cd my-codebuild-app
+      - run: cd /home/runner/work/my-codebuild-app/my-codebuild-app
       - run: npm install
       - run: npm run build
