@@ -7,5 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: cd /home/runner/work/my-codebuild-app/my-codebuild-app
-      - run: npm install
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}      - run: npm install
       - run: npm run build
