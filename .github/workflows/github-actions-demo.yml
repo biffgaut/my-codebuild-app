@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
+      - name: Get current folder
+        run: pwd
       - run: cd /home/runner/work/my-codebuild-app/my-codebuild-app
       - name: List files in the repository
         run: |
