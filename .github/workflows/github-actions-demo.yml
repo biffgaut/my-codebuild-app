@@ -3,13 +3,12 @@ on: [push]
 jobs:
   Hello-World-Job:
     runs-on:
-      - codebuild--${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-hello-world-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: Get current folder
         run: pwd
-      - run: cd /home/runner/work/my-codebuild-app/my-codebuild-app
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
