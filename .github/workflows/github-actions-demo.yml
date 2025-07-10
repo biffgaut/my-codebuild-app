@@ -1,10 +1,9 @@
-
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: pull_request
+name: Hello World
+on: [push]
 jobs:
-  Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
+  Hello-World-Job:
+    runs-on:
+      - codebuild--${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
