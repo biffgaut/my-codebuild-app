@@ -4,6 +4,7 @@ jobs:
   Hello-World-Job:
     runs-on:
       - codebuild-hello-world-${{ github.run_id }}-${{ github.run_attempt }}
+        buildspec-override:true
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
