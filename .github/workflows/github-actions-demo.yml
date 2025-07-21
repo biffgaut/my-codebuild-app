@@ -3,7 +3,7 @@ on: pull_request
 jobs:
   Hello-World-Job:
     runs-on:
-      - codebuild-hello-world-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-testCodeBuild-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
